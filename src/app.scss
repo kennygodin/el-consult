@@ -1,0 +1,66 @@
+@import './responsive.scss';
+
+:root {
+  --primaryColor: #203b6a;
+  --darkBackground: #111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.theme {
+  transition: background-color 1s ease-in, color 1s ease-in;
+}
+
+.light {
+  --texts: #111;
+  --primaryColor: #203b6a;
+  --mobileBg: #fff;
+}
+
+.dark {
+  --texts: #fff;
+  --mobileBg: #111;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 60px;
+
+  @include md {
+    padding: 0 20px;
+  }
+}
+
+html.light {
+  background-color: var(--lightBackground);
+}
+
+html.dark {
+  background-color: var(--darkBackground);
+}
+
+a {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
